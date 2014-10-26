@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div id="python-and-spreadsheets-state-of-the-union-oct-2014" class="slide section level1">
+<h1>Python and Spreadsheets: State of the Union, Oct 2014</h1>
+<h2 id="kojo-idrissa">Kojo Idrissa</h2>
+<h3 id="rouge-pythonista">Rouge Pythonista</h3>
+<h3 id="educator-accountant-w-an-mba">Educator &amp; Accountant w/ an MBA</h3>
+</div>
+<div id="setup" class="slide section level1">
+<h1>Setup</h1>
+<h2 id="not-a-lot-of-code-here">Not a lot of code here</h2>
+<ul class="incremental">
+<li>Interesting code provided by the specific use case</li>
+</ul>
+<h2 id="contextbackground">Context/Background</h2>
+<ul class="incremental">
+<li>My role as a Python contributor
+<ul class="incremental">
+<li>Grow the community</li>
+<li>Bring non-programmers into the fold</li>
+</ul></li>
+<li>Solutions for people who aren't professional developers
+<ul class="incremental">
+<li>Solutions obvious to experienced developers often aren't available to non-developers</li>
+</ul></li>
+<li>Two primary audiences
+<ul class="incremental">
+<li>Spreadsheet users who want to &quot;step their game up&quot;</li>
+<li>Python developers confronted with spreadsheets</li>
+</ul></li>
+</ul>
+</div>
+<div id="three-approaches-other" class="slide section level1">
+<h1>Three approaches + &quot;Other&quot;</h1>
+<h2 id="working-with-spreadsheet-files">Working with spreadsheet files</h2>
+<h2 id="using-python-code-in-a-spreadsheet-app">Using Python code in a spreadsheet app</h2>
+<h2 id="scripting-spreadsheet-apps">Scripting spreadsheet apps</h2>
+<h3 id="other-options-im-still-investigating">Other: options I'm still investigating</h3>
+</div>
+<div id="working-with-spreadsheet-files-1" class="slide section level1">
+<h1>Working with spreadsheet files</h1>
+<ul class="incremental">
+<li>Use case: You've been given a spreadsheet full of data to process, but not in a way that's convenient in your spreadsheet app.
+<ul class="incremental">
+<li>Perfect entry point for creating new Pythonistas. Spreadsheet hackers are ALMOST programmers.</li>
+</ul></li>
+<li><a href="http://pythonhosted.org//openpyxl/">OpenPyXL</a>
+<ul class="incremental">
+<li>get it from <a href="https://pypi.python.org/pypi/openpyxl">PyPi</a></li>
+<li>Python &gt;=2.6</li>
+<li>works with .xlsx files</li>
+<li>I've demoed a larger example program</li>
+</ul></li>
+<li><a href="http://www.python-excel.org">Python-Excel</a> packages
+<ul class="incremental">
+<li>xlrd; xlwt; xlutils</li>
+<li>Support for both <em>.xls and </em>.xlsx files</li>
+</ul></li>
+<li>both under active development; my choice for a new person is OpenPyXL, as the documentation is better for getting started</li>
+<li>For working with *.ods files, start at http://www.opendocumentformat.org/developers/ Python is at the top...as it <strong>should</strong> be. :-)</li>
+<li>Example Results</li>
+</ul>
+</div>
+<div id="running-python-code-in-a-spreadsheet-app" class="slide section level1">
+<h1>Running Python code IN a spreadsheet app</h1>
+<ul class="incremental">
+<li>Use case: Adding functionality from Python to your spreadsheet-based workflow
+<ul class="incremental">
+<li>I see this as the largest growth area: replacing VB with Python</li>
+<li>For current Pythonistas confronted with spreadsheets</li>
+</ul></li>
+<li><a href="http://vimeo.com/89024595?utm_source=Python+Weekly+Newsletter&amp;utm_campaign=42441d6a58-Python_Weekly_Issue_133_April_3_2014&amp;utm_medium=email&amp;utm_term=0_9e26887fc5-42441d6a58-312680573">Python for Excel with PyXLL (Enthought's Canopy plugin)</a> pronounced &quot;Pixel&quot;
+<ul class="incremental">
+<li>Yes Glen, it's a DLL. :-)</li>
+<li>Centralized management of functions used in your spreadsheets. This is difficult to do with Excel, where each person uses their own formulas or VBA code
+<ul class="incremental">
+<li>The spreadsheet from Hong Kong gets used in Chicago, which gets sent to Houston. Changes made at every step, often based on &quot;preference&quot;.</li>
+<li>No consistent formula methodology; differing computational assumptions; NONE of those people are programmers.</li>
+<li>No uniform method for the results that are generated</li>
+</ul></li>
+<li>Asynchronous functions allow you to keep Excel from &quot;freezing&quot; while Python is processing.</li>
+<li>Enthought's <a href="https://www.enthought.com/products/pyxll/">PyXLL</a> page</li>
+</ul></li>
+<li>xlwings and ExcelPython
+<ul class="incremental">
+<li>First five mintues of these <a href="http://www.youtube.com/watch?v=qDzeSGv28kU&amp;feature=youtu.be&amp;t=35s">EuroPython 2014 Lightning Talks</a> focuses on these two packages. The authors are planning to merge them.</li>
+<li>xlwings: <a href="http://xlwings.org/?utm_source=Python+Weekly+Newsletter&amp;utm_campaign=42441d6a58-Python_Weekly_Issue_133_April_3_2014&amp;utm_medium=email&amp;utm_term=0_9e26887fc5-42441d6a58-312680573">Replace your VBA code with Python</a></li>
+<li><a href="https://github.com/ericremoreynolds/excelpython">ExcelPython: call Python scripts from Excel/VBA</a></li>
+</ul></li>
+<li><a href="https://www.pytexas.org/2014/talks/35/">PyInEx</a>; Python interpreter embedded IN Excel!!
+<ul class="incremental">
+<li>I won't talk about this, because there's already an entire presentation on it <a href="https://www.pytexas.org/2014/talks/35/">scheduled for Sunday at 1pm</a>. You should go see that. :-)</li>
+</ul></li>
+</ul>
+</div>
+<div id="scripting-spreadsheet-apps-still-researching" class="slide section level1">
+<h1>Scripting spreadsheet apps (still researching)</h1>
+<ul class="incremental">
+<li>Use Case: including a spreadsheet app as part of a Python-based work flow</li>
+<li>Open/LibreOffice (via PyUno)
+<ul class="incremental">
+<li>https://wiki.openoffice.org/wiki/PyUNO_bridge#Tutorial</li>
+<li>https://wiki.openoffice.org/wiki/Python</li>
+<li>https://www.google.com/search?client=safari&amp;rls=en&amp;q=libreoffice+python+uno&amp;ie=UTF-8&amp;oe=UTF-8&amp;gfe_rd=cr&amp;ei=UpvtU-WtLefU8gfDmIGoBg</li>
+<li>http://en.wikipedia.org/wiki/Universal_Network_Objects</li>
+<li>https://pypi.python.org/pypi/unotools/0.3.2</li>
+<li>http://api.libreoffice.org/examples/examples.html#python_examples</li>
+<li><a href="https://bitbucket.org/t2y/unotools">UNOTools</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="issuescaveats" class="slide section level1">
+<h1>Issues/Caveats</h1>
+<ul class="incremental">
+<li>vulnerability to changes in application or file format
+<ul class="incremental">
+<li>Excel/MS famous for this</li>
+<li>rise of Open Document formats may minimize this</li>
+</ul></li>
+</ul>
+</div>
+<div id="other-still-researching" class="slide section level1">
+<h1>Other (still researching)</h1>
+<ul class="incremental">
+<li>Google Docs spreadsheets with Python?
+<ul class="incremental">
+<li><a href="https://pypi.python.org/pypi/gspread">GSpread</a> in PyPi</li>
+</ul></li>
+<li>PeeWee to explore CSV files?
+<ul class="incremental">
+<li>http://charlesleifer.com/blog/using-peewee-to-explore-csv-files/</li>
+<li>http://peewee.readthedocs.org/en/latest/peewee/playhouse.html#csv-loader</li>
+</ul></li>
+<li>Other CSV file options
+<ul class="incremental">
+<li>Not my preferred approach</li>
+</ul></li>
+</ul>
+</div>
+<div id="thats-all-questions" class="slide section level1">
+<h1>That's all! Questions?</h1>
+</div>
+</body>
+</html>
