@@ -1,7 +1,8 @@
 #Python and Spreadsheets: State of the Union, Oct 2014
 ##Kojo Idrissa
-###Rouge Pythonista
-###Educator & Accountant w/ an MBA
+-  Rouge Pythonista
+-  Educator & Accountant w/ an MBA
+-  @transition
 
 #Setup
 
